@@ -36,7 +36,17 @@ public class CustomView extends View {
         super.onDraw(canvas);
 
         //canvas.drawRect(100, 100, 200, 200, paint);
-        
+        paint.setStyle(Paint.Style.FILL);
+        paint.setColor(Color.RED);
+        canvas.drawRect(10, 10, 300, 300, paint);
+
+        paint.setStyle(Paint.Style.STROKE);
+        paint.setStrokeWidth(20.0F);
+        paint.setColor(Color.BLACK);
+        canvas.drawRect(10, 10, 300, 300, paint);
+
+        paint.setAntiAlias(true);
+        canvas.drawCircle(400, 400, 200, paint);
     }
 
     @Override
